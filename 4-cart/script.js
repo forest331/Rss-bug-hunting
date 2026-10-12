@@ -110,7 +110,8 @@ function renderCart() {
 		total = total - total * discount
 	}
 
-	badgeEl.textContent = cart.length
+	const totalQty = cart.reduce((sum, item) => sum + item.qty, 0)
+	badgeEl.textContent = totalQty
 	totalEl.textContent = total
 	emptyMsg.hidden = true
 }
