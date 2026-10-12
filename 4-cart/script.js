@@ -78,7 +78,9 @@ function applyPromo() {
 }
 
 function clearCart() {
-	cart.splice(0, 1)
+	cart = []
+	discount = 0
+	promoInput.value = ''
 	renderCart()
 }
 
